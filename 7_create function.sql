@@ -1,0 +1,11 @@
+ALTER FUNCTION countALL()
+RETURNS money
+AS
+BEGIN
+	DECLARE @sum money
+	SELECT @sum = SUM(Amount) 
+	FROM PAYMENTS
+
+	RETURN @sum;
+END;
+
